@@ -1,0 +1,36 @@
+/* Navigation for mobile devices */
+@media screen and (max-width: 1023px) {
+  .nav_menu {
+    position: fixed;
+    background-color: hsl(0, 0%, 0%, .3);
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding-block: 4rem;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px); /* For safari */
+    transition: top .4s;
+  }
+
+  .nav_menu.show_menu {
+    top: 0;
+  }
+
+  .nav_menu .nav_list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+  }
+  .nav_menu .nav_list .nav_link {
+    color: var(--title-color);
+    font-family: var(--second-font);
+    font-weight: var(--font-medium);
+  }
+
+  .nav_menu .nav_close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+  }
+}

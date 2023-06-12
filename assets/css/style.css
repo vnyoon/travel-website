@@ -122,3 +122,33 @@ img {
   /*== For animation ScrollReveal ==*/
   overflow: hidden;
 }
+
+
+/*== Header ==*/
+.header {
+  width: 100%;
+  height: var(--head-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: transparent;
+}
+
+.nav {
+  height: var(--head-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_logo, .nav_close, .nav_toggle {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.nav_logo {
+  font-family: var(--second-font);
+  font-weight: var(--font-semi-bold);
+}
