@@ -54,8 +54,24 @@ window.addEventListener('scroll', scrollUp);
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-// 滚动部分活动链接
+const sections = document.querySelectorAll('section[id]');
+function scrollActiveSection() {
+  const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight,
+          sectionTop = current.offsetTop - 50,
+          sectionId = current.getAttribute('id'),
+          sectionsClass = document.querySelector('.nav_li a[href*=' + sectionId + ']')
 
+    if (scrollY > sectionTop && scrollY <= sectionHeight + sectionTop) {
+      sectionsClass.classList.add('active_link')
+    } else {
+      sectionsClass.classList.remove('active_link')
+    }
+  })
+};
+window.addEventListener('scroll', scrollActiveSection)
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 // 显示滚动动画
