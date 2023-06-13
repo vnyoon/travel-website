@@ -118,6 +118,27 @@ img {
   margin-bottom: 1.5rem;
 }
 
+.section .button {
+  background-color: hsla(0, 0%, 100%, .2);
+  padding: 1.25rem 1.5rem;
+  color: var(--title-color);
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  font-family: var(--second-font);
+  font-weight: var(--font-semi-bold);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+.section .button i {
+  font-size: 1.25rem;
+  font-weight: initial;
+  transition: transform .4s;
+}
+.section .button:hover i {
+  transform: translateX(.25rem);
+} 
+
 .main {
   /*== For animation ScrollReveal ==*/
   overflow: hidden;
@@ -214,27 +235,6 @@ img {
   margin-bottom: 2rem;
   color: var(--title-color);
 }
-.home_caption .button {
-  background-color: hsla(0, 0%, 100%, .2);
-  padding: 1.25rem 1.5rem;
-  color: var(--title-color);
-  display: inline-flex;
-  align-items: center;
-  column-gap: .5rem;
-  font-family: var(--second-font);
-  font-weight: var(--font-semi-bold);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-}
-.home_caption .button i {
-  font-size: 1.25rem;
-  font-weight: initial;
-  transition: transform .4s;
-}
-.home_caption .button:hover i {
-  transform: translateX(.25rem);
-} 
-
 
 .home_cards {
   grid-template-columns: 240px;
@@ -266,3 +266,35 @@ img {
   background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
 }
 
+/*== About ==*/
+.about_container {
+  row-gap: 3rem;
+}
+
+.about_container .about_caption {
+  text-align: center;
+}
+.about_caption .caption_describe {
+  margin-bottom: 2rem;
+}
+
+.about_container .about_image {
+  position: relative;
+  justify-self: center;
+  overflow: hidden;
+}
+.about_image img {
+  width: 300px;
+  transition: transform .4s;
+}
+.about_image:hover img {
+  transform: scale(1.2);
+}
+.about_image .about_shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
+}
