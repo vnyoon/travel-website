@@ -298,3 +298,49 @@ img {
   height: 100%;
   background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
 }
+
+/*== Popular ==*/
+.popular_container {
+  padding-top: 1.5rem;
+  grid-template-columns: 240px;
+  justify-content: center;
+  row-gap: 2.5rem;
+}
+
+.pop_card .card_image {
+  position: relative;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.pop_card .card_image img {
+  transition: transform .4s;
+}
+.pop_card .card_image:hover img {
+  transform: scale(1.2);
+}
+.pop_card .card_image .img_shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
+}
+
+.pop_card .pop_title {
+  font-size: var(--h3-font-size);
+  margin-bottom: .5rem;
+}
+
+.pop_card .pop_location {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  font-size: var(--small-font-size);
+  font-family: var(--second-font);
+  font-weight: 500;
+}
+.pop_card .pop_location i {
+  font-size: 1rem;
+}
+
