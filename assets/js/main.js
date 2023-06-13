@@ -41,7 +41,16 @@ window.addEventListener('scroll', scrollHeader);
 
 
 /*=============== SHOW SCROLL UP ===============*/ 
-// 显示滚动顶部
+function scrollUp() {
+  const scrollUp = document.getElementById('scroll-up');
+  
+  if (this.scrollY >= 300) {
+    scrollUp.classList.add('show-scroll-up')
+  } else {
+    scrollUp.classList.remove('show-scroll-up')
+  }
+}
+window.addEventListener('scroll', scrollUp);
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/

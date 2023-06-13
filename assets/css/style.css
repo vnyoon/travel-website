@@ -510,3 +510,40 @@ img {
   color: var(--text-color-light);
   text-align: center;
 }
+
+
+/*== Scroll Bar ==*/
+::-webkit-scrollbar {
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: hsl(0, 0%, 10%);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: .5rem;
+  background-color: hsl(0, 0%, 20%);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(0, 0%, 30%);
+}
+
+/*== Scroll UP ==*/
+.scroll-up {
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  padding: 6px;
+  display: inline-flex;
+  color: var(--title-color);
+  font-size: 1.25rem;
+  backdrop-filter: blur(24px);
+  --webkit-backdrop-filter: blur(24px);
+  z-index: var(--z-tooltip);
+  transition: bottom .4s, transform .4s;
+}
+.scroll-up:hover {
+  transform: translateY(-.25rem);
+}
+.scroll-up.show-scroll-up {
+  bottom: 3rem;
+}
