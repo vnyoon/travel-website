@@ -134,6 +134,18 @@ img {
   z-index: var(--z-fixed);
   background-color: transparent;
 }
+.header.head-blur::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.3);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
 
 .nav {
   height: var(--head-height);

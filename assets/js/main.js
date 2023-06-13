@@ -28,7 +28,17 @@ function linkAction() {
 navLinks.forEach(link => link.addEventListener('click', linkAction));
 
 /*=============== ADD BLUR TO HEADER ===============*/
-// 头部添加模糊
+function scrollHeader() {
+  const header = document.getElementById('header');
+  
+  if (this.scrollY >= 100) {
+    header.classList.add('head-blur')
+  } else {
+    header.classList.remove('head-blur')
+  }
+}
+window.addEventListener('scroll', scrollHeader);
+
 
 /*=============== SHOW SCROLL UP ===============*/ 
 // 显示滚动顶部
