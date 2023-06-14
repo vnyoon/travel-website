@@ -74,4 +74,30 @@ function scrollActiveSection() {
 window.addEventListener('scroll', scrollActiveSection)
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
-// 显示滚动动画
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 3000,
+  delay: 400,
+  // reset: true //Animations repeat
+});
+
+sr.reveal('.home_caption, .explore_caption, .explore_user, .footer');
+
+sr.reveal('.home_card', {
+  delay: 600,
+  distance: '100px',
+  interval: 100
+});
+
+sr.reveal('.about_caption, .join_image', {
+  origin: 'right'
+});
+
+sr.reveal('.about_image, .join_caption', {
+  origin: 'left'
+});
+
+sr.reveal('.pop_card', {
+  interval: 200
+});
